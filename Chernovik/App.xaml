@@ -4,6 +4,62 @@
              xmlns:local="clr-namespace:Chernovik"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-         
+        <Style TargetType="Button" x:Key="mainBtn"> 
+            <Setter Property="Width" Value="200"/>
+            <Setter Property="Height" Value="35"/>
+            <Setter Property="Margin" Value="5"/>
+            <Setter Property="FontFamily" Value="Segoe Print"/>
+            <Setter Property="FontSize" Value="17"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="Background" Value="#EAB14D"/>
+        </Style>
+        
+        <Style TargetType="TextBlock" x:Key="mainTxtb">
+            <Setter Property="HorizontalAlignment" Value="Center"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
+            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="FontFamily" Value="Segoe Print"/>
+            <Setter Property="TextAlignment" Value="Right"/>
+            <Setter Property="Width" Value="200"/>
+        </Style>
+
+        <Style TargetType="TextBox" x:Key="mainTxt">
+            <Setter Property="HorizontalAlignment" Value="Center"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
+            <Setter Property="FontFamily" Value="Segoe Print"/>
+            <Setter Property="FontSize" Value="15"/>
+            <Setter Property="Height" Value="30"/>
+            <Setter Property="Width" Value="250"/>
+            <Setter Property="Margin" Value="10"/>
+            <Setter Property="Padding" Value="0,4"/>
+        </Style>
+
+        <Style TargetType="ComboBox" x:Key="mainCombo">
+            <Setter Property="HorizontalAlignment" Value="Center"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
+            <Setter Property="FontFamily" Value="Segoe Print"/>
+            <Setter Property="FontSize" Value="15"/>
+            <Setter Property="Foreground" Value="Black"/>
+            <Setter Property="Width" Value="200"/>
+            <Setter Property="Height" Value="30"/>
+            <Setter Property="Margin" Value="10"/>
+        </Style>
+
+        <Style TargetType="CheckBox" x:Key="mainCheck">
+            <Setter Property="FontFamily" Value="Segoe Print"/>
+            <Setter Property="FontSize" Value="15"/>
+        </Style>
+
+        <Style TargetType="Image" x:Key="ImgSource">
+            <Setter Property="Width" Value="150"/>
+            <Setter Property="HorizontalAlignment" Value="Center"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
+        </Style>
+
+        <Style TargetType="TextBlock" x:Key="materialTxtb">
+            <Setter Property="HorizontalAlignment" Value="Right"/>
+            <Setter Property="FontFamily" Value="Sergoe Print"/>
+            <Setter Property="FontSize" Value="17"/>
+        </Style>
     </Application.Resources>
 </Application>
