@@ -32,7 +32,7 @@ namespace Chernovik.Pages
             MaterialTypeBox.SelectedIndex = 0;
             SortCBox.SelectedIndex = 0;
 
-            MaterialTypeBox.ItemsSource = Transition.Context.Material.ToList();
+            ListMaterial.ItemsSource = Transition.Context.Material.ToList();
         }
         public void DataView()
         {
@@ -105,7 +105,7 @@ namespace Chernovik.Pages
 
         private void AddBtn_Click(object sender, RoutedEventArgs e)
         {
-
+            Transition.MainFrame.Navigate(new AddMaterial());
         }
 
         private void BtnEdit_Click(object sender, RoutedEventArgs e)
@@ -115,7 +115,24 @@ namespace Chernovik.Pages
 
         private void BtnDelete_Click(object sender, RoutedEventArgs e)
         {
+            var dltData = ListMaterial.SelectedItems.Cast<Product>().ToList();
 
+            if (MessageBox.Show($"Вы действительно хотите удалить материал?",
+                "Удаление продуктов", MessageBoxButton.YesNo, MessageBoxImage.Question) == MessageBoxResult.Yes)
+            {
+                try
+                {
+                    Transition.Context.Product.RemoveRange(dltData);
+                    Transition.Context.SaveChanges();
+                    MessageBox.Show("Данные успешно удалены", "Удаление материала", MessageBoxButton.OK, MessageBoxImage.Information);
+
+                    DataView();
+                }
+                catch (Exception error)
+                {
+                    MessageBox.Show($"При сохранении произошла ошибка:\n{error.Message}", "Удаление материалов", MessageBoxButton.OK, MessageBoxImage.Error);
+                }
+            }
         }
 
         private void SortCBox_SelectionChanged(object sender, SelectionChangedEventArgs e)

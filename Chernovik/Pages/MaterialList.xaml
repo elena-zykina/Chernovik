@@ -19,9 +19,9 @@
 
         <Grid>
             <Grid.ColumnDefinitions>
-                <ColumnDefinition/>
-                <ColumnDefinition Width="325"/>
-                <ColumnDefinition Width="240"/>
+                <ColumnDefinition Width="320"/>
+                <ColumnDefinition Width="295"/>
+                <ColumnDefinition Width="284"/>
             </Grid.ColumnDefinitions>
 
             <TextBox HorizontalAlignment="Left" 
@@ -32,28 +32,28 @@
                      LostFocus="SearchMaterialBox_LostFocus" GotFocus="SearchMaterialBox_GotFocus" 
                      Margin="10,0,0,10" Width="305"/>
 
-            <WrapPanel HorizontalAlignment="Center" Width="325" Grid.Column="1">
+            <WrapPanel HorizontalAlignment="Center" Width="312" Margin="316,0,272,0" Grid.ColumnSpan="3">
                 <ComboBox x:Name="SortCBox" SelectionChanged="SortCBox_SelectionChanged"
-                          Style="{StaticResource mainCombo}" Width="200">
+                          Style="{StaticResource mainCombo}" Width="180">
                     <ComboBoxItem>
                         <TextBlock Text="Нет"
                                    Style="{StaticResource mainTxtb}"
-                                   Width="160"/>
+                                   Width="150"/>
                     </ComboBoxItem>
                     <ComboBoxItem>
                         <TextBlock Text="Наименование"
                                    Style="{StaticResource mainTxtb}"
-                                   Width="160"/>
+                                   Width="150"/>
                     </ComboBoxItem>
                     <ComboBoxItem>
                         <TextBlock Text="Остаток на складе"
                                    Style="{StaticResource mainTxtb}"
-                                   Width="160"/>
+                                   Width="150"/>
                     </ComboBoxItem>
                     <ComboBoxItem>
                         <TextBlock Text="Стоимость"
                                    Style="{StaticResource mainTxtb}"
-                                   Width="160"/>
+                                   Width="150"/>
                     </ComboBoxItem>
                 </ComboBox>
                 <CheckBox Content="Убывание" VerticalAlignment="Center"
@@ -63,7 +63,7 @@
 
             <ComboBox Grid.Column="2" DisplayMemberPath="Title"
                       x:Name="MaterialTypeBox" SelectionChanged="MaterialTypeBox_SelectionChanged"
-                      Style="{StaticResource mainCombo}" Margin="10,10,16,10" Width="214"/>
+                      Style="{StaticResource mainCombo}" Margin="5,10,30,10" Width="240"/>
         </Grid>
         <Grid Grid.Row="1">
             <Grid.RowDefinitions>
@@ -88,7 +88,8 @@
                                                     Background="Transparent"
                                                     Width="670"
                                                     Height="150"
-                                                    x:Name="BorderTest" BorderThickness="1"
+                                                    x:Name="BorderTest" 
+                                                    BorderThickness="1"
                                                     Margin="0 10 0 0">
                                                 <WrapPanel Orientation="Vertical">
                                                     <WrapPanel Orientation="Horizontal"
